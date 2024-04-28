@@ -7,7 +7,7 @@ module "gke_cluster" {
 
 terraform {
   backend "gcs" {
-    bucket = "az_secret"
+    bucket = var.GOOGLE_BUCKET
     prefix = "terraform/state"
   }
 }
